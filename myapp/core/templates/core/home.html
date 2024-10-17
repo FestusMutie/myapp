@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Home - MyApp
+{% endblock %}
+
+{% block content %}
+    <div class="mt-5">
+        <h1>Welcome Home, {{ user.username }}</h1>
+        <p>This is your personalized home page.</p>
+        <a href="{% url 'user' %}" class="btn btn-primary">User Profile</a>
+        <a href="{% url 'album' %}" class="btn btn-success">Albums</a>
+        <a href="{% url 'photo' %}" class="btn btn-success">Photos</a> 
+    </div>
+{% endblock %}

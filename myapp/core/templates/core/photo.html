@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Photos - MyApp
+{% endblock %}
+
+{% block content %}
+{% load static %}  <!-- Load static tag -->
+    <div class="mt-5">
+        <h1>Your Photos</h1>
+        <p>Here is the list of your uploaded photos.</p>
+        <!-- Example photo content -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'core/photo1.jpg' %}" class="card-img-top" alt="Photo 1">
+                    <div class="card-body">
+                        <p class="card-text">Photo 1 Description</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat for more photos -->
+        </div>
+    </div>
+{% endblock %}

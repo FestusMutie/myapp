@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    User Profile - MyApp
+{% endblock %}
+
+{% block content %}
+    <div class="mt-5">
+        <h1>{{ user.username }}'s Profile</h1>
+        <p>Email: {{ user.email }}</p>
+        <p>Joined on: {{ user.date_joined }}</p>
+        <a href="{% url 'album' %}" class="btn btn-primary">View Albums</a>
+    </div>
+{% endblock %}
